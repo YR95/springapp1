@@ -1,17 +1,12 @@
 package ru.romaniuk;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class TestBean {
-	private String name;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public TestBean(String name) {
-		this.name = name;
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+		musicPlayer.playMusic();
+		context.close();
 	}
 }
