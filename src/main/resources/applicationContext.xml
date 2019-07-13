@@ -10,7 +10,10 @@
 
 	<bean id="musicPlayer"
 		  class="ru.romaniuk.MusicPlayer">
-		<constructor-arg ref="musicBean"/>
+		<property name="XMusic" ref="musicBean" />
+		<property name="name" value="Back in black"/>
+		<property name="volume" value="78"/>
+
 	</bean>
 
 </beans>
