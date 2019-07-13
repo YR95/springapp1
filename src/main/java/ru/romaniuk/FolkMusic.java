@@ -1,8 +1,8 @@
 package ru.romaniuk;
 
-public class ClassicMusic implements Music {
+public class FolkMusic implements Music {
     @Override
     public String getSong() {
-        return "Classic";
+        return "Folk song";
     }
 }
