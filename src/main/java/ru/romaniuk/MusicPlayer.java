@@ -31,7 +31,7 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void setXMusic(List musicList) {
+    public void setMusicList(List musicList) {
         this.musicList = musicList;
     }
 

@@ -13,19 +13,17 @@
     <bean id="folkBean"
           class="ru.romaniuk.FolkMusic"/>
 
-    <bean id="list" class="java.util.ArrayList">
-        <constructor-arg>
-            <list>
-                <ref bean="rockBean" />
-                <ref bean="classicBean" />
-                <ref bean="folkBean" />
-            </list>
-        </constructor-arg>
-    </bean>
-
     <bean id="musicPlayer"
           class="ru.romaniuk.MusicPlayer">
-        <property name="XMusic" ref="list"/>
+
+        <property name="musicList">
+            <list>
+                <ref bean="rockBean"/>
+                <ref bean="classicBean"/>
+                <ref bean="folkBean"/>
+            </list>
+        </property>
+
 
     </bean>
 
