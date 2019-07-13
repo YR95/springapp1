@@ -17,7 +17,7 @@
         <constructor-arg>
             <list>
                 <ref bean="rockBean" />
-                <ref bean="classicBean" />ref
+                <ref bean="classicBean" />
                 <ref bean="folkBean" />
             </list>
         </constructor-arg>
