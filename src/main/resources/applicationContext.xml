@@ -4,8 +4,11 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="musicBean"
-		  class="ru.romaniuk.RockMusic">
+    <bean id="musicBean"
+          class="ru.romaniuk.ClassicMusic"
+          init-method="doInitMethod"
+          destroy-method="destroyMethod"
+		  scope="prototype">
 	</bean>
 
 	<bean id="musicPlayer"
