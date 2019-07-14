@@ -2,13 +2,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd">xsd
 
     <bean id="musicBean"
           class="ru.romaniuk.ClassicMusic"
           init-method="doInitMethod"
           destroy-method="destroyMethod"
-		  scope="prototype">
+    factory-method="getClassicalMusic"
+
+
+    >
+
 	</bean>
 
 	<bean id="musicPlayer"
