@@ -9,7 +9,7 @@ public class MusicPlayer {
     private Music music;
 
     @Autowired
-    public MusicPlayer(Music music) {
+    public void setMusicPlayer(Music music) {
         this.music = music;
     }
 
