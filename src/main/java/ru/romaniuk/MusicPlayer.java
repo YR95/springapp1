@@ -1,20 +1,22 @@
 package ru.romaniuk;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    private ClassicMusic classicMusic;
-    private RockMusic rockMusic;
+    private Music classicMusic;
+    private Music rockMusic;
 
     @Autowired
-    public MusicPlayer(ClassicMusic classicMusic, RockMusic rockMusic) {
+    public MusicPlayer(@Qualifier("classicMusic") Music classicMusic,
+                       @Qualifier("rockMusic") Music rockMusic) {
         this.classicMusic = classicMusic;
         this.rockMusic = rockMusic;
     }
 
     public String playMusic() {
-        return "Playing: " + classicMusic.getSong() + "\n " + rockMusic.getSong();
+        return "Playing: " + "\n " + classicMusic.getSong() + "\n " + rockMusic.getSong();
     }
 }
