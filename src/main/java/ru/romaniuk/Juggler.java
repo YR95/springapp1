@@ -1,0 +1,17 @@
+package ru.romaniuk;
+
+public class Juggler implements Performer {
+    private int beanBags = 3;
+
+    public Juggler() {
+    }
+
+    public Juggler(int beanBags) {
+        this.beanBags = beanBags;
+    }
+
+    @Override
+    public void perform() throws PerformerEcxeption {
+        System.out.println("juggling " + beanBags + " ");
+    }
+}
