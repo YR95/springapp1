@@ -6,6 +6,6 @@ public class Saxofone implements Instrument {
 
 	@Override
 	public void play() {
-		System.out.println(" Tooooo oooo oooo");
+		System.out.println("Playing saxosofone");
 	}
 }

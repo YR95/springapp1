@@ -1,6 +1,5 @@
 package ru.romaniuk;
 
 public interface Performer {
-    void perform() throws PerformerEcxeption;
-
+	void perform() throws PerformerEcxeption;
 }
