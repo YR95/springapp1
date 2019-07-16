@@ -1,21 +1,23 @@
 package ru.romaniuk;
 
-import java.util.Collection;
+import java.util.Map;
 
 public class OneManBand implements Performer {
-	private Collection<Instrument> instruments;
+	private Map<String, Instrument> instruments;
 
 	public OneManBand() {
 	}
 
-	public void setInstruments(Collection<Instrument> instruments) {
+	public void setInstruments(Map<String, Instrument> instruments) {
 		this.instruments = instruments;
 	}
 
 	@Override
 	public void perform() {
-		for (Instrument i : instruments) {
-			i.play();
+		for (String key : instruments.keySet()) {
+			System.out.print(key + " : ");
+			Instrument instrument = instruments.get(key);
+			instrument.play();
 		}
 	}
 }
