@@ -12,4 +12,9 @@
         <constructor-arg name="poem" ref="sonet"/>
 
     </bean>
+    <bean id="saxofone" class="ru.romaniuk.Saxofone"/>
+    <bean id="kenny" class="ru.romaniuk.Instrumentalist">
+        <property name="song" value="Jingle Bella"/>
+        <property name="indtrumet" ref="saxofone"/>
+    </bean>
 </beans>
