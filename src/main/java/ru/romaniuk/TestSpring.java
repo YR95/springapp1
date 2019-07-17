@@ -7,6 +7,9 @@ public class TestSpring {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		context.getBean("poetStar", Performer.class).perform();
 		context.getBean("kenny", Performer.class).perform();
+		context.getBean("karina", Performer.class).perform();
+		context.getBean("marina", Performer.class).perform();
+
 		context.getBean("jimm", Performer.class).perform();
 
 	}
