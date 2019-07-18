@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   xmlns="http://www.springframework.org/schema/beans"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="sonet" class="ru.romaniuk.Sonnet29">
-    </bean>
+	<bean id="sonet" class="ru.romaniuk.Sonnet29">
+	</bean>
 
-    <bean id="poetStar" class="ru.romaniuk.PoeticJuggler">
-        <constructor-arg name="beanBags" value="60"/>
-        <constructor-arg name="poem" ref="sonet"/>
+	<bean id="poetStar" class="ru.romaniuk.PoeticJuggler">
+		<constructor-arg name="beanBags" value="60"/>
+		<constructor-arg name="poem" ref="sonet"/>
 
-    </bean>
-    <bean id="saxofone" class="ru.romaniuk.Saxofone"/>
-    <bean id="kenny" class="ru.romaniuk.Instrumentalist">
-        <property name="song" value="Jingle Bella"/>
-        <property name="indtrumet" ref="saxofone"/>
-    </bean>
+	</bean>
+	<bean id="indtrumet" class="ru.romaniuk.Saxofone"/>
+
+	<bean id="kenny" class="ru.romaniuk.Instrumentalist"
+		  autowire="byName">
+		<property name="song" value="Jingle Bella"/>
+
+	</bean>
 </beans>
