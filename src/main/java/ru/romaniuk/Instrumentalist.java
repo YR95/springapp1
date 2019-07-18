@@ -4,16 +4,16 @@ public class Instrumentalist implements Performer {
 	private Instrument indtrumet;
 	private String song;
 
-	public Instrumentalist() {
+	public Instrumentalist(Instrument indtrumet) {
+		this.indtrumet = indtrumet;
 	}
 
 	public Instrument getIndtrumet() {
 		return indtrumet;
 	}
-
-	public void setIndtrumet(Instrument indtrumet) {
-		this.indtrumet = indtrumet;
-	}
+	//	public void setIndtrumet(Instrument indtrumet) {
+	//		this.indtrumet = indtrumet;
+	//	}
 
 	public String getSong() {
 		return song;
@@ -27,7 +27,7 @@ public class Instrumentalist implements Performer {
 		return song;
 	}
 	@Override
-	public void perform() throws PerformerEcxeption {
+	public void perform() {
 		System.out.println("Playing " + song);
 		indtrumet.play();
 	}

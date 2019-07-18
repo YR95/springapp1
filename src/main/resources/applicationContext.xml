@@ -4,18 +4,11 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="sonet" class="ru.romaniuk.Sonnet29">
-	</bean>
 
-	<bean id="poetStar" class="ru.romaniuk.PoeticJuggler">
-		<constructor-arg name="beanBags" value="60"/>
-		<constructor-arg name="poem" ref="sonet"/>
-
-	</bean>
-	<bean id="indtrumet" class="ru.romaniuk.Saxofone"/>
+	<bean id="saxosofone" class="ru.romaniuk.Saxofone"/>
 
 	<bean id="kenny" class="ru.romaniuk.Instrumentalist"
-		  autowire="byName">
+		  autowire="constructor">
 		<property name="song" value="Jingle Bella"/>
 
 	</bean>
